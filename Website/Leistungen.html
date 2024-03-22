@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>Second Chance</title>
+</head>
+<body style="background-color: #333;">
+    <header class="sticky-header">
+        <div class="header-container">
+            <a href="Main.html" id="homeLink" class="logo-link">
+                <img src="logo.png" alt="Webseiten-Logo" class="logo" style="width: 100px;">
+            </a>
+            <nav>
+                <a href="Main.html" id="homeLink" class="nav-link">Home</a>
+                <a href="Leistungen.html" id="leistungenLink" class="nav-link">Leistungen</a>
+                <a href="Kontakt.html" id="kontaktLink" class="nav-link">Kontakt</a>
+            </nav>
+        </div>
+    </header>
+    <main class="main-container">
+        <section class="hero">
+            <img src="logo2.png" alt="Beispielbild" style="display: block; margin: 0 auto; width: 300px;">
+            <h1>Leistungen</h1>
+            <form class="leistungen-form" onsubmit="handleFormSubmit(event)">
+                <div class="umfrage-container">
+                    <label for="umfrage">Wird Ihre Spende von Ihnen vorbeigebracht oder benötigen Sie eine Abholung?</label>
+                    <select id="umfrage" name="umfrage" onchange="toggleFormFields()" required>
+                        <option value="ja">Persönlich vorbeibringen</option>
+                        <option value="nein">Abholung durch unser Sammelfahrzeug</option>
+                    </select>
+                </div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="krisengebiet">Krisengebiet:</label>
+                <select id="krisengebiet" name="krisengebiet" required>
+                    <option value="" disabled selected>Bitte auswählen</option>
+                    <option value="Ukraine">Ukraine</option>
+                    <option value="Syrien">Syrien</option>
+                </select>
+                <label for="kleidung">Art der Kleidung:</label>
+                <select id="kleidung" name="kleidung" required>
+                    <option value="" disabled selected>Bitte auswählen</option>
+                    <option value="Jacke">Jacke</option>
+                    <option value="Hose">Hose</option>
+                    <option value="Kleid">Kleid</option>
+                </select>
+                <label for="kleidunggroesse">Größe der Kleidung:</label>
+                <select id="kleidunggroesse" name="kleidunggroesse" required>
+                    <option value="" disabled selected>Bitte auswählen</option>
+                    <option value="XS">XS</option>
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                </select>
+                <div id="abholungDetails" style="display: none;">
+                    <label for="plz">PLZ:</label>
+                    <input type="text" id="plz" name="plz" placeholder="PLZ" maxlength="5">
+                    <label for="strasse">Straße:</label>
+                    <input type="text" id="strasse" name="strasse" placeholder="Straße" maxlength="30">
+                    <label for="hausnummer">Hausnummer:</label>
+                    <input type="text" id="hausnummer" name="hausnummer" placeholder="Hausnummer" maxlength="10">
+                </div>
+                <button type="submit">Registrieren</button>
+            </form>
+        </section>
+    </main>
+    <footer class="sticky-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <a href="Datenschutz.html">Datenschutz</a>
+                <a href="Impressum.html">Impressum</a>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

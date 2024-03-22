@@ -1,0 +1,137 @@
+/* Allgemeine Stile für den gesamten Körper (Body) der Webseite */
+body {
+    font-family: Arial, sans-serif; /* Verwendete Schriftart */
+    margin: 0; /* Kein Außenabstand für den Körper */
+    padding: 0; /* Kein Innenabstand für den Körper */
+    overflow-y: auto; /* Bei Bedarf eine vertikale Scrollleiste anzeigen */
+}
+
+/* Header-Bereich mit Logo und Navigation */
+.header-container {
+    display: flex; /* Flexbox für das Layout */
+    justify-content: space-between; /* Platzierung der Elemente auf beiden Seiten */
+    align-items: center; /* Zentrierung der Elemente vertikal */
+    background-color: #333; /* Hintergrundfarbe des Headers */
+    padding: 10px 20px; /* Innenabstand oben/unten 10px, seitlich 20px */
+}
+
+/* Stil für das Logo im Header */
+.logo {
+    max-width: 150px; /* Maximale Breite des Logos */
+}
+
+/* Navigationselemente */
+nav {
+    display: flex; /* Flexbox für die Navigation */
+}
+
+nav a {
+    color: white; /* Textfarbe der Navigationslinks */
+    text-decoration: none; /* Keine Unterstreichung der Links */
+    margin: 0 15px; /* Abstand zwischen den Navigationslinks */
+}
+
+/* Stil für den aktiven Navigationslink */
+.nav-link.active {
+	font-weight: bold; /* Fettschrift für den aktiven Link */
+}
+
+/* Hauptbereich der Webseite mit Hintergrundbild */
+.main-container {
+    background: url('wallpaper.png') center top/cover no-repeat fixed; /* Hintergrundbild-Eigenschaften */
+    color: white; /* Textfarbe im Hauptcontainer */
+    text-align: center; /* Textausrichtung zentriert */
+    padding: 50px 20px; /* Innenabstand oben/unten 50px, seitlich 20px */
+    margin-top: 80px; /* Außenabstand oben 80px */
+    margin-bottom: 80px; /* Außenabstand unten 80px */
+}
+
+/* Hero-Bereich mit halbtransparentem Hintergrund */
+.hero {
+    background-color: rgba(0, 0, 0, 0.6); /* Halbtransparenter Hintergrund */
+    padding: 150px; /* Innenabstand für den Hero-Bereich */
+}
+
+/* Sticky Header, der beim Scrollen fixiert bleibt */
+.sticky-header {
+	position: fixed; /* Fixierte Position */
+	top: 0; /* Oben am Bildschirm positionieren */
+	width: 100%; /* Vollständige Breite des Bildschirms */
+	background-color: #333; /* Hintergrundfarbe des fixierten Headers */
+	z-index: 1000; /* Z-Index, um über anderen Elementen zu erscheinen */
+}
+
+/* Sticky Footer, der am unteren Bildschirmrand fixiert bleibt */
+.sticky-footer {
+	position: fixed; /* Fixierte Position */
+	bottom: 0; /* Unten am Bildschirm positionieren */
+	width: 100%; /* Vollständige Breite des Bildschirms */
+	background-color: #333; /* Hintergrundfarbe des fixierten Footers */
+	z-index: 1000; /* Z-Index, um über anderen Elementen zu erscheinen */
+	box-sizing: border-box; /* Berücksichtigung von Border- und Padding-Werten in der Breite */
+}
+
+/* Stile für den Footer-Bereich */
+.footer-container {
+    padding: 10px 20px; /* Innenabstand oben/unten 10px, seitlich 20px */
+    text-align: center; /* Textausrichtung zentriert */
+}
+
+/* Stile für den Inhalt innerhalb des Footers */
+.footer-content {
+    display: flex; /* Flexbox für den Footer-Inhalt */
+    justify-content: center; /* Zentrierung des Inhalts horizontal */
+}
+
+/* Stile für die Links innerhalb des Footers */
+.footer-content a {
+    color: white; /* Textfarbe der Footer-Links */
+    text-decoration: none; /* Keine Unterstreichung der Links */
+    margin: 0 15px; /* Abstand zwischen den Footer-Links */
+}
+
+/* Effekt beim Hovern über Footer-Links */
+.footer-content a:hover {
+    text-decoration: underline; /* Unterstreichung beim Hovern */
+}
+
+/* Media Query für Bildschirme mit einer Breite von höchstens 600px */
+@media only screen and (max-width: 600px) {
+	/* Anpassungen für den Header bei kleinen Bildschirmen */
+	.header-container {
+		flex-direction: column; /* Spaltenanordnung für den Header */
+		text-align: center; /* Textausrichtung zentriert */
+	}
+
+	/* Anpassungen für die Navigation bei kleinen Bildschirmen */
+	nav {
+		margin-top: 10px; /* Außenabstand oben 10px */
+	}
+
+	/* Anpassungen für die Navigationslinks bei kleinen Bildschirmen */
+	nav a {
+		margin: 10px; /* Abstand zwischen den Navigationslinks */
+	}
+
+	/* Anpassungen für den Hauptcontainer bei kleinen Bildschirmen */
+	.main-container {
+		padding: 30px 10px; /* Innenabstand oben/unten 30px, seitlich 10px */
+		margin-top: 60px; /* Außenabstand oben 60px */
+		margin-bottom: 60px; /* Außenabstand unten 60px */
+	}
+}
+
+/* Stile für das Formular im Leistungen-Bereich */
+.leistungen-form {
+    max-width: 400px; /* Maximale Breite des Formulars */
+    margin: auto; /* Zentrierte Ausrichtung des Formulars */
+}
+
+/* Stile für Labels, Selects und Inputs im Formular */
+.leistungen-form label,
+.leistungen-form select,
+.leistungen-form input {
+    display: block; /* Als Blockelement anzeigen */
+    width: 100%; /* Vollständige Breite innerhalb des Containers */
+    margin-bottom: 10px; /* Abstand zwischen den Elementen */
+}
